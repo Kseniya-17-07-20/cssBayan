@@ -6,7 +6,7 @@ body{
     background: red;
     display: flex;
     flex-direction: column;
-    height: 568px;
+   
     overflow: hidden;
 }
 .h1 {
@@ -16,6 +16,7 @@ body{
 .module-container{
     display: flex;
     flex-direction: column;
+    height: 568px;
 }
 
 .module {
@@ -51,10 +52,10 @@ body{
     margin: 10px;
     cursor: pointer;
 }
-
-/* .module-container~.pic:first-child{
-    display: block;
-} */
+.pic img:hover{
+    transform: scale(0.9);
+    transition-duration:2s; 
+}
 
 .module>.pic { display: none; }
 .module:hover>.pic { 
@@ -96,28 +97,17 @@ body{
     animation: rotate 1.1s linear;
 }
 
-/*  .hide + label {
-    border-bottom: 1px dotted green;
-    padding: 0;
-    color: green;
-    cursor: pointer;
-    display: inline-block; 
-}  */
+
 /* вид текста label при активном переключателе */
-.hide:checked + label {
+.hide:checked + label{
     color: rgb(205, 39, 105);
     border-bottom: 0;
     background-image: url(./assets/img/close.jpg);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 90% 50%;
-    
-  
 }
-/* .hide:checked + label + .text:hover>.open-close {
-  display: none;
 
-} */
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
     display: block; 
@@ -128,13 +118,14 @@ body{
     padding: 10px; 
 }
 
-
-
 @media screen and (min-width : 380px) and (max-width : 819px){
 
     .container {
       background: blueviolet;
-      height: 768px;
+   
+    }
+    .module-container{
+        height: 800px;
     }
     .text {
         width: 400px;
@@ -152,9 +143,11 @@ body{
     .container {
 
         background: yellowgreen;
+     
+    }
+    .module-container{
         height: 1180px;
     }
-
     .text {
         width: 600px;
     }
@@ -169,7 +162,7 @@ body{
 
 @media screen and (min-width : 1920px){
     .container {
-        height: 1080px;
+        height: 2080px;
         background: grey;
     }
     .text {
