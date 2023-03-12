@@ -128,14 +128,6 @@ body{
     padding: 10px; 
 }
 
-/* .module .pic:first-child{
-    display: block;
-} */
-
-
-.radio-blocks{
-    display:none;
-}
 
 
 @media screen and (min-width : 380px) and (max-width : 819px){
