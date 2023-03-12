@@ -165,6 +165,9 @@ body{
         height: 2080px;
         background: grey;
     }
+    .module-container{
+        height: 2080px;
+    }
     .text {
         width: 800px;
     }
