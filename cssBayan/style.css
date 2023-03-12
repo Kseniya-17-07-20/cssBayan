@@ -38,7 +38,7 @@ body{
 }
 
 .main-text {
-    
+    font-size: 14px; 
 }
 .open-close {
   width: 30px;
@@ -72,22 +72,6 @@ body{
     background-position: 90% 50%;
    
  }
- @keyframes changeColor {
-    0% {
-      background-color: red;
-    }
-    100% {
-      background-color: blue;
-    }
-  }
-/*   .pic {
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-fill-mode: none;
-    animation-play-state: running;
-  } */
 .hide {
     display: none; 
 }
@@ -149,6 +133,11 @@ body{
 } */
 
 
+.radio-blocks{
+    display:none;
+}
+
+
 @media screen and (min-width : 380px) and (max-width : 819px){
 
     .container {
@@ -160,6 +149,11 @@ body{
     }
     .pic img{
         width: 400px;
+    }
+
+    .main-text {
+        font-size: 1.1em; 
+      font-weight:500;
     }
 }
 @media screen and (min-width : 820px) and (max-width : 1919px){
@@ -175,6 +169,10 @@ body{
     .pic img{
         width: 600px;
     }
+    .main-text {
+        font-size: 1.3em; 
+        font-weight: bolder;
+    }
 }
 
 @media screen and (min-width : 1920px){
@@ -187,5 +185,9 @@ body{
     }
     .pic img{
         width: 800px;
+    }
+    .main-text {
+        font-size: 1.3em; 
+        font-weight: 700;
     }
 }
