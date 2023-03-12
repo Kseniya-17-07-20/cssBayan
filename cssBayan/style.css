@@ -6,11 +6,18 @@ body{
     background: red;
     display: flex;
     flex-direction: column;
+    height: 568px;
+    overflow: hidden;
 }
 .h1 {
     margin: 0 auto;
     padding: 10px;
 }
+.module-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .module {
     width: 320px;
     margin: 0 auto;
@@ -21,24 +28,75 @@ body{
 .text {
     display: flex;
     width: 300px;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
     align-items: center;
     border: 1px solid rgb(228, 243, 12);
+    background-color: rgba(228, 219, 208, 0.6);
+    cursor: pointer;
 }
+
 .main-text {
     
 }
 .open-close {
+  
 }
 .pic img{
-    width: 200px;
+    width: 180px;
     margin: 10px;
+    cursor: pointer;
 }
+
+/* .module-container~.pic:first-child{
+    display: block;
+} */
+
+.module>.pic { display: none; }
+.module:hover>.pic { display: block; }
+
+.text>.open-close { display: none; }
+.text:hover>.open-close { display: block; }
+
+.hide {
+    display: none; 
+}
+.hide + label ~ div{
+    display: none;
+}
+/*  .hide + label {
+    border-bottom: 1px dotted green;
+    padding: 0;
+    color: green;
+    cursor: pointer;
+    display: inline-block; 
+}  */
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: rgb(205, 39, 105);
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block; 
+    background: #efefef;
+    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+    -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
+    box-shadow: inset 3px 3px 10px #7d8e8f;
+    padding: 10px; 
+}
+
+/* .module .pic:first-child{
+    display: block;
+} */
+
 
 @media screen and (min-width : 380px) and (max-width : 819px){
 
     .container {
       background: blueviolet;
+      height: 768px;
     }
     .text {
         width: 400px;
@@ -49,8 +107,9 @@ body{
 }
 @media screen and (min-width : 820px) and (max-width : 1919px){
     .container {
-        padding: 0 40px;
+
         background: yellowgreen;
+        height: 1180px;
     }
 
     .text {
@@ -63,7 +122,7 @@ body{
 
 @media screen and (min-width : 1920px){
     .container {
-        padding: 0 40px;
+        height: 1080px;
         background: grey;
     }
     .text {
