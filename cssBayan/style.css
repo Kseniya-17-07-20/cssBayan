@@ -41,7 +41,10 @@ body{
     
 }
 .open-close {
-  
+  width: 30px;
+}
+.open-close:hover{
+    background-image: url(./assets/img/open.jpg);
 }
 .pic img{
     width: 180px;
@@ -54,17 +57,61 @@ body{
 } */
 
 .module>.pic { display: none; }
-.module:hover>.pic { display: block; }
+.module:hover>.pic { 
+    display: block;
+    transition-duration:2s; 
+    transition: 1s;
+ }
 
 .text>.open-close { display: none; }
-.text:hover>.open-close { display: block; }
-
+.text:hover>.open-close { 
+    display: block;
+    background-image: url(./assets/img/open.jpg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 90% 50%;
+   
+ }
+ @keyframes changeColor {
+    0% {
+      background-color: red;
+    }
+    100% {
+      background-color: blue;
+    }
+  }
+/*   .pic {
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  } */
 .hide {
     display: none; 
 }
+.hide + label:hover {
+
+    background-image: url(./assets/img/open.jpg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 90% 50%;
+
+}
+
 .hide + label ~ div{
     display: none;
 }
+
+@keyframes rotate {
+    from {transform: rotate(45deg);}
+    to {transform: rotate(0deg);}
+}
+.pic img{
+    animation: rotate 1.1s linear;
+}
+
 /*  .hide + label {
     border-bottom: 1px dotted green;
     padding: 0;
@@ -76,7 +123,17 @@ body{
 .hide:checked + label {
     color: rgb(205, 39, 105);
     border-bottom: 0;
+    background-image: url(./assets/img/close.jpg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 90% 50%;
+    
+  
 }
+/* .hide:checked + label + .text:hover>.open-close {
+  display: none;
+
+} */
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
     display: block; 
